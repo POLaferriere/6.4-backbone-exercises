@@ -19,3 +19,12 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
 }
+
+.list-view {
+  float: left;
+  border: 1px solid black;
+}
+
+.zoom-view {
+  float: right;
+}
