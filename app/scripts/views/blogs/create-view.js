@@ -12,9 +12,9 @@ var CreateView = MainView.extend({
 
   createPost: function(e){
     e.preventDefault();
-    this.collection.create(this.getInfo());
+    this.collection.create(this.getInfo(), {wait: true});
     this.$('input[type=text], textarea').val('');
-    this.collection.add(this.getInfo());
+    // this.collection.add(this.getInfo());
   },
 
   getInfo: function(){

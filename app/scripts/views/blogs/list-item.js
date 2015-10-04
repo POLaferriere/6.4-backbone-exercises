@@ -4,6 +4,7 @@ import BlogZoomView from 'views/blogs/blog-zoom';
 
 var ListItemView = MainView.extend({
   initialize: function(){
+    this.listenTo(this.model, 'change', this.render);
   },
 
   template: JST['blogs/list-item'],
@@ -20,7 +21,8 @@ var ListItemView = MainView.extend({
   showBlog: function() {
       $('.zoom-view').html('');
       var blogZoom = new BlogZoomView({
-        model: this.model
+        model: this.model,
+        collection: this.collection
       });
       $('#container').append(blogZoom.render().el);
     }

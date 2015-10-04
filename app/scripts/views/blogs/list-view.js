@@ -8,6 +8,7 @@ var ListView = MainView.extend({
   template: JST['blogs/list-template'],
 
   render: function(){
+    this.$el.html('');
     this.renderChildren();
     return this;
   },
@@ -18,8 +19,11 @@ var ListView = MainView.extend({
 
   renderChildren: function(){
     this.collection.forEach((blog) => {
-      var listItemView = new ListItemView({model: blog});
-      this.$el.append(listItemView.render().el);
+      var listItemView = new ListItemView({
+        model: blog,
+        collection: this.collection,
+      });
+      this.$el.prepend(listItemView.render().el);
     });
   },
 });
