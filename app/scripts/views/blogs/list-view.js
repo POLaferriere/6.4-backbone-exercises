@@ -23,7 +23,7 @@ var ListView = MainView.extend({
         model: blog,
         collection: this.collection,
       });
-      this.$el.prepend(listItemView.render().el);
+      this.$el.append(listItemView.render().el);
     });
   },
 });

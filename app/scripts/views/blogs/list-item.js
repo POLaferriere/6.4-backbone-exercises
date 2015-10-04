@@ -3,6 +3,8 @@ import BlogZoomView from 'views/blogs/blog-zoom';
 
 
 var ListItemView = MainView.extend({
+  className: 'list-item',
+
   initialize: function(){
     this.listenTo(this.model, 'change', this.render);
   },

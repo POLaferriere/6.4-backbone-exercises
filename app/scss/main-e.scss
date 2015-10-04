@@ -10,43 +10,102 @@ $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 $very-light-gray: #fafafa;
-
+$blogPosts: #497ba6;
+$blogZoom: #20507b;
+$button: #8fbbdc;
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
 
 body {
   background-color: $base-background-color;
   color: $base-font-color;
-  font-family: $base-font-family;
+  font-family: "Roboto", $helvetica;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .create-view {
   font-family: "Roboto";
-  width: 420px;
+  width: 50%;
   margin: 0 auto;
   padding: 20px 10px;
 
   > * {
+    width: 100%;
     display: block;
     margin: 10px auto;
-    width: 390px;
+  }
+
+  textarea {
+    resize: none;
   }
 
   h1 {
     text-align: center;
   }
-
 }
 
 .list-view {
   float: left;
+  width: 30%;
+  max-width: 500px;
+}
+
+.list-item {
+  max-height: 300px;
+  list-style: none;
+  background: $blogPosts;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 5px 20px 10px;
+  color: white;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    overflow: hidden;
+    max-height: 190px;
+  }
 }
 
 .zoom-view {
   float: right;
+  width: 55%;
+  list-style: none;
+  background: $blogZoom;
+  padding: 5px 20px 10px;
+  color: white;
+  border-radius: 5px;
 
   input,
   textarea {
     display: block;
+    color: black;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button {
+    width: 100%;
+    background: $button;
+    border: none;
+  }
+}
+
+.button-container {
+  text-align: center;
+
+  button {
+    width: 150px;
+    margin: 10px;
+    background: $button;
+    border: none;
   }
 }
