@@ -13,10 +13,9 @@ var TagListView = MainView.extend({
   renderChildren: function(){
     this.$el.html('');
     var keysArr = _.keys(_.groupBy(this.collection.toJSON(), 'tag'));
-    debugger;
     keysArr.forEach((tag) => {
       var tagItemView = new TagItemView({
-        colletion: this.collection,
+        collection: this.collection,
         model: new Tag({
           tag: tag
         })
