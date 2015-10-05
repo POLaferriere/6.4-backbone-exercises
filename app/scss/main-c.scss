@@ -10,21 +10,129 @@ $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 $very-light-gray: #fafafa;
-
+$blogPosts: #497ba6;
+$blogZoom: #20507b;
+$button: #8fbbdc;
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
+$nav-bar: #497BA6;
+$border: #8FBBDC;
 
 body {
   background-color: $base-background-color;
   color: $base-font-color;
-  font-family: $base-font-family;
+  font-family: "Roboto", $helvetica;
+}
+
+nav {
+  display: block;
+  text-align: center;
+  background: $nav-bar;
+  height: 60px;
+  padding: 10px 0;
+  margin-bottom: 40px;
+
+  a {
+    padding: 0 30px;
+    border-left: 1px solid $border;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+
+    &:last-child {
+      border-right: 1px solid $border;
+    }
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.create-view {
+  font-family: "Roboto";
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 10px;
+
+  > * {
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
 }
 
 .list-view {
   float: left;
-  border: 1px solid black;
+  width: 30%;
+  max-width: 500px;
+}
+
+.list-item {
+  max-height: 300px;
+  list-style: none;
+  background: $blogPosts;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 5px 20px 10px;
+  color: white;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    overflow: hidden;
+    max-height: 190px;
+  }
 }
 
 .zoom-view {
   float: right;
+  width: 55%;
+  list-style: none;
+  background: $blogZoom;
+  padding: 5px 20px 10px;
+  color: white;
+  border-radius: 5px;
+
+  input,
+  textarea {
+    display: block;
+    color: black;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button {
+    width: 100%;
+    background: $button;
+    border: none;
+  }
+}
+
+.button-container {
+  text-align: center;
+
+  button {
+    width: 150px;
+    margin: 10px;
+    background: $button;
+    border: none;
+  }
 }

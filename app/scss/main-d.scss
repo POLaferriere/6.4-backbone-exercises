@@ -10,6 +10,11 @@ $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 $very-light-gray: #fafafa;
+$create-form: #497ba6;
+$button: #8fbbdc;
+$text: #20507B;
+$nav-bar: #497BA6;
+$border: #8FBBDC;
 
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
@@ -20,6 +25,118 @@ body {
   font-family: $base-font-family;
 }
 
+nav {
+  display: block;
+  text-align: center;
+  background: $nav-bar;
+  height: 60px;
+  padding: 10px 0;
+
+  a {
+    padding: 0 30px;
+    border-left: 1px solid $border;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+
+    &:last-child {
+      border-right: 1px solid $border;
+    }
+  }
+}
+
+
+.link-create {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  min-width: 300px;
+  background: $create-form;
+  padding: 0 20px;
+
+  h1 {
+    color: white;
+    margin-top: 150px;
+  }
+
+  input[type="submit"] {
+    width: 70%;
+    height: 30px;
+    margin-left: 15%;
+    margin-top: 30px;
+    background-color: $button;
+    color: white;
+    border: none;
+  }
+}
+
+.form-line {
+  margin-left: 20px;
+  display: block;
+  line-height: 50px;
+
+  label {
+    display: inline-block;
+    width: 75px;
+    color: white;
+    font-size: 20px;
+  }
+
+  input {
+    width: 70%;
+  }
+}
+
 .link-tag-view {
   float: right;
+  width: 60%;
+  min-width: 500px;
+
+  ul {
+    list-style: none;
+  }
+}
+
+.link-item {
+
+  color: $text;
+  margin-left: 40px;
+
+  h1 {
+    font-size: 30px;
+    line-height: 0.8em;
+  }
+
+  h2 {
+    line-height: 0.8em;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .tag-container {
+    height: 10px;
+    line-height: 1em;
+    margin-bottom: 60px;
+
+    > * {
+      display: inline-block;
+    }
+
+    label {
+      width: 40px;
+
+    }
+  }
+}
+
+.tag-item {
+    color: $text;
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 40px;
 }

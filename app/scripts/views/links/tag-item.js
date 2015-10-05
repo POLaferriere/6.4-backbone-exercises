@@ -3,6 +3,8 @@ import MainView from 'views/main-view';
 var TagItemView = MainView.extend({
   tagName: 'li',
 
+  className: 'tag-item',
+
   template: JST['links/tag-item'],
 
   render: function(){

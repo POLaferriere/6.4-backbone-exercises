@@ -1,1 +1,5 @@
-Style App A, B and C
+Figure out how to post on top
+
+Remove views
+
+Tag list stays stable

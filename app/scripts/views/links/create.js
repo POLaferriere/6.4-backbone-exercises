@@ -3,8 +3,9 @@ import MainView from 'views/main-view';
 var CreateLinkView = MainView.extend({
   tagName: 'form',
 
+  className: 'link-create',
 
-  template: JST['URLs/create'],
+  template: JST['links/create'],
 
   events: {
     'submit' : 'createContact'
@@ -13,9 +14,8 @@ var CreateLinkView = MainView.extend({
   createContact: function(e){
     console.log('sent');
     e.preventDefault();
-    this.collection.create(this.getInfo());
+    this.collection.create(this.getInfo(), {wait: true});
     this.$('input[type="text"]').val('');
-    this.collection.add(this.getInfo());
   },
 
   getInfo: function(){

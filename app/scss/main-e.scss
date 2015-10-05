@@ -15,11 +15,38 @@ $blogZoom: #20507b;
 $button: #8fbbdc;
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
+$nav-bar: #497BA6;
+$border: #8FBBDC;
+
 
 body {
   background-color: $base-background-color;
   color: $base-font-color;
   font-family: "Roboto", $helvetica;
+
+}
+
+nav {
+  display: block;
+  text-align: center;
+  background: $nav-bar;
+  height: 60px;
+  padding: 10px 0;
+
+  a {
+    padding: 0 30px;
+    border-left: 1px solid $border;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+
+    &:last-child {
+      border-right: 1px solid $border;
+    }
+  }
+}
+
+.container {
   max-width: 900px;
   margin: 0 auto;
 }

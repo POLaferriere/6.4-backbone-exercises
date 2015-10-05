@@ -5,13 +5,16 @@ import Tag from 'models/tags/tag';
 var TagListView = MainView.extend({
   tagName: 'ul',
 
+  template: JST['links/tag-list'],
+
   render: function(){
+    this.$el.html('');
+    this.$el.html(this.template());
     this.renderChildren();
     return this;
   },
 
   renderChildren: function(){
-    this.$el.html('');
     var keysArr = _.keys(_.groupBy(this.collection.toJSON(), 'tag'));
     keysArr.forEach((tag) => {
       var tagItemView = new TagItemView({
